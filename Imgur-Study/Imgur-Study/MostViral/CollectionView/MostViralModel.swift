@@ -11,5 +11,7 @@ struct MostViralModel {
     let title: String
     let tags: [String]
     let user: String
+    let userImage: String
+    let postTime: String
     let imageId: String
 }
