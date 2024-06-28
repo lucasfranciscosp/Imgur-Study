@@ -74,6 +74,8 @@ struct MostViralCollectionCell: View {
                     getTagScroll()
                         .frame(height: 28)
                 }
+                .padding([.top, .leading, .trailing])
+
                 Image("Image2")
                     .resizable()
                     .scaledToFit()
@@ -82,7 +84,6 @@ struct MostViralCollectionCell: View {
             .background(Color.white)
         }
         .frame(height: 553.0)
-        .padding()
     }
 }
 
