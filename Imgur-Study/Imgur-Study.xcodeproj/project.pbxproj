@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		084DA63C2C2C5CCD00D65146 /* MostViralCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084DA63B2C2C5CCD00D65146 /* MostViralCollectionView.swift */; };
 		084DA63E2C2C5CD800D65146 /* MostViralCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084DA63D2C2C5CD800D65146 /* MostViralCollectionCell.swift */; };
+		08A52B612C2EF7F30029F034 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A52B602C2EF7F30029F034 /* API.swift */; };
 		08B3EC302C2D8C1D00370DE8 /* MostViralModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B3EC2F2C2D8C1D00370DE8 /* MostViralModel.swift */; };
 		08B3EC332C2D96F800370DE8 /* GenericButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B3EC322C2D96F800370DE8 /* GenericButton.swift */; };
 		B66B352A2C2B0B4100241029 /* Imgur_StudyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66B35292C2B0B4100241029 /* Imgur_StudyApp.swift */; };
@@ -20,6 +21,7 @@
 /* Begin PBXFileReference section */
 		084DA63B2C2C5CCD00D65146 /* MostViralCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MostViralCollectionView.swift; sourceTree = "<group>"; };
 		084DA63D2C2C5CD800D65146 /* MostViralCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MostViralCollectionCell.swift; sourceTree = "<group>"; };
+		08A52B602C2EF7F30029F034 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		08B3EC2F2C2D8C1D00370DE8 /* MostViralModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MostViralModel.swift; sourceTree = "<group>"; };
 		08B3EC322C2D96F800370DE8 /* GenericButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericButton.swift; sourceTree = "<group>"; };
 		B66B35262C2B0B4100241029 /* Imgur-Study.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Imgur-Study.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -48,6 +50,14 @@
 				B66B352B2C2B0B4100241029 /* MostViralFeed.swift */,
 			);
 			path = MostViral;
+			sourceTree = "<group>";
+		};
+		08A52B5F2C2EF7E60029F034 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				08A52B602C2EF7F30029F034 /* API.swift */,
+			);
+			path = API;
 			sourceTree = "<group>";
 		};
 		08B3EC312C2D8F4100370DE8 /* CollectionView */ = {
@@ -87,6 +97,7 @@
 		B66B35282C2B0B4100241029 /* Imgur-Study */ = {
 			isa = PBXGroup;
 			children = (
+				08A52B5F2C2EF7E60029F034 /* API */,
 				B66B35292C2B0B4100241029 /* Imgur_StudyApp.swift */,
 				084DA63A2C2C5CB100D65146 /* MostViral */,
 				B66B352D2C2B0B4200241029 /* Assets.xcassets */,
@@ -179,6 +190,7 @@
 				08B3EC302C2D8C1D00370DE8 /* MostViralModel.swift in Sources */,
 				B66B352A2C2B0B4100241029 /* Imgur_StudyApp.swift in Sources */,
 				084DA63E2C2C5CD800D65146 /* MostViralCollectionCell.swift in Sources */,
+				08A52B612C2EF7F30029F034 /* API.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
