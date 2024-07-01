@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-
+import API
 struct MostViralCollectionCell: View {
     let model: MostViralModel
 
@@ -69,7 +69,7 @@ struct MostViralCollectionCell: View {
                         getFollowButton()
                         Spacer()
                     }
-                    .padding(.horizontal, 0.0)
+                    .padding(.trailing, 0.0)
 
                     getTagScroll()
                         .frame(height: 28)
