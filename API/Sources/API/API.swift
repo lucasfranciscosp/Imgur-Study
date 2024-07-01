@@ -3,12 +3,11 @@
 
 import Foundation
 
-class API {
-    static var shared = API()
-
+public class API {
+    static public var shared = API()
     let imgurURL = "https://api.imgur.com/"
 
-    func getMostViral(completion: @escaping ((Data?) -> Void)){
+    public func getMostViral(completion: @escaping ((Data?) -> Void)){
         let url = imgurURL + "3/gallery/hot/time/day/1"
         var urlRequest:URLRequest = URLRequest(url: URL(string: url)!)
         urlRequest.httpMethod = "GET"

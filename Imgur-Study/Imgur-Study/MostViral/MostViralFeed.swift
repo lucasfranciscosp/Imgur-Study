@@ -9,7 +9,7 @@ import SwiftUI
 
 struct MostViralFeed: View {
     @State private var searchText: String = ""
-    let postList = [MostViralModel(title: "title of the post here", tags: ["tag1", "tag2", "tag3"], user: "name", userImage: "", postTime: "00h", imageId: "")]
+    let postList = [MostViralModel()]
 
     var body: some View {
         NavigationStack {

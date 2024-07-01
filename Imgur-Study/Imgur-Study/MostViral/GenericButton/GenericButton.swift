@@ -15,6 +15,11 @@ struct GenericButton: View {
 
     var body: some View {
         Button {
+            var viralModelList: MostViralList?
+            API.shared.getMostViral { data in
+                viralModelList = MostViralWorker.getMostViralModelList(data: data)
+            }
+            print(viralModelList)
             
         } label: {
             ZStack {

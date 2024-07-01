@@ -21,6 +21,3 @@ struct MostViralCollectionView: View {
     }
 }
 
-#Preview {
-    MostViralCollectionView(postList: [MostViralModel(title: "", tags: [""], user: "", userImage: "", postTime: "00h", imageId: "")])
-}
