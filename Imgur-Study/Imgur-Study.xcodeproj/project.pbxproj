@@ -3,12 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 60;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		084DA63C2C2C5CCD00D65146 /* MostViralCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084DA63B2C2C5CCD00D65146 /* MostViralCollectionView.swift */; };
 		084DA63E2C2C5CD800D65146 /* MostViralCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084DA63D2C2C5CD800D65146 /* MostViralCollectionCell.swift */; };
+		089228532C32C984002580B7 /* API in Frameworks */ = {isa = PBXBuildFile; productRef = 089228522C32C984002580B7 /* API */; };
 		08B3EC302C2D8C1D00370DE8 /* MostViralModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B3EC2F2C2D8C1D00370DE8 /* MostViralModel.swift */; };
 		08B3EC332C2D96F800370DE8 /* GenericButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B3EC322C2D96F800370DE8 /* GenericButton.swift */; };
 		B66B352A2C2B0B4100241029 /* Imgur_StudyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66B35292C2B0B4100241029 /* Imgur_StudyApp.swift */; };
@@ -46,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				089228532C32C984002580B7 /* API in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -161,6 +163,9 @@
 			dependencies = (
 			);
 			name = "Imgur-Study";
+			packageProductDependencies = (
+				089228522C32C984002580B7 /* API */,
+			);
 			productName = "Imgur-Study";
 			productReference = B66B35262C2B0B4100241029 /* Imgur-Study.app */;
 			productType = "com.apple.product-type.application";
@@ -189,6 +194,9 @@
 				Base,
 			);
 			mainGroup = B66B351D2C2B0B4100241029;
+			packageReferences = (
+				089228512C32C984002580B7 /* XCLocalSwiftPackageReference "../API" */,
+			);
 			productRefGroup = B66B35272C2B0B4100241029 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -444,6 +452,20 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		089228512C32C984002580B7 /* XCLocalSwiftPackageReference "../API" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = ../API;
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		089228522C32C984002580B7 /* API */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = API;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B66B351E2C2B0B4100241029 /* Project object */;
 }

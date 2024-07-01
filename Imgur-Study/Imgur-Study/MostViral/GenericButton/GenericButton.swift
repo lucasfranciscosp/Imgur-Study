@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import API
 
 struct GenericButton: View {
     let color: Color
@@ -14,7 +15,7 @@ struct GenericButton: View {
 
     var body: some View {
         Button {
-            print("aa")
+            
         } label: {
             ZStack {
                 RoundedRectangle(cornerRadius: 40)
