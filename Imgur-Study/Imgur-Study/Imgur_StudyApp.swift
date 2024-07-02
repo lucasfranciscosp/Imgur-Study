@@ -11,7 +11,7 @@ import SwiftUI
 struct Imgur_StudyApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MostViralFeed()
         }
     }
 }

@@ -21,9 +21,10 @@ struct MostViralCollectionCell: View {
     }
     
     private func getPostTitle() -> some View {
-        Text("title")
-            .font(.system(size: 17))
-            .bold()
+        guard let title = model.title else { return Text("")}
+        return Text("\(String(describing: title))")
+                    .font(.system(size: 17))
+                    .bold()
     }
 
     private func getRoundImage() -> some View {

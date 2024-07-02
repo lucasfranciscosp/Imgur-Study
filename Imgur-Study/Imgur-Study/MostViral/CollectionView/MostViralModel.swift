@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import API
 
 struct MostViralModel: Codable {
     var title: String?
@@ -33,16 +34,3 @@ struct MostViralList: Codable {
     var data:[MostViralModel]
 }
 
-class MostViralWorker {
-    static func getMostViralModelList(data: Data?) -> MostViralList? {
-        guard let data = data else { return nil }
-        do {
-             let mostViralList: MostViralList = try JSONDecoder().decode(MostViralList.self, from: data)
-             print(mostViralList)
-             return mostViralList
-        } catch let error {
-           print(error)
-        }
-        return nil
-    }
-}

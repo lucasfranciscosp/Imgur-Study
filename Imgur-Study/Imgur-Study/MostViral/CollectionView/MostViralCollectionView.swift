@@ -8,13 +8,15 @@
 import SwiftUI
 
 struct MostViralCollectionView: View {
-    var postList: [MostViralModel]
+    var postList: MostViralList?
 
     var body: some View {
-        ScrollView(.vertical) {
-            LazyVGrid(columns: [GridItem(.flexible())]) {
-                ForEach(0..<postList.count) { index in
-                    MostViralCollectionCell(model: postList[index])
+        if let postList = postList {
+            ScrollView(.vertical) {
+                LazyVGrid(columns: [GridItem(.flexible())]) {
+                    ForEach(0..<postList.data.count) { index in
+                        MostViralCollectionCell(model: postList.data[index])
+                    }
                 }
             }
         }

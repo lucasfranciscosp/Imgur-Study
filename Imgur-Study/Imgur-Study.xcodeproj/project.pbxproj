@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		082EBBBB2C32E9C500987956 /* MostViralWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082EBBBA2C32E9C500987956 /* MostViralWorker.swift */; };
 		084DA63C2C2C5CCD00D65146 /* MostViralCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084DA63B2C2C5CCD00D65146 /* MostViralCollectionView.swift */; };
 		084DA63E2C2C5CD800D65146 /* MostViralCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084DA63D2C2C5CD800D65146 /* MostViralCollectionCell.swift */; };
 		089228532C32C984002580B7 /* API in Frameworks */ = {isa = PBXBuildFile; productRef = 089228522C32C984002580B7 /* API */; };
@@ -25,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		082EBBBA2C32E9C500987956 /* MostViralWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MostViralWorker.swift; sourceTree = "<group>"; };
 		084DA63B2C2C5CCD00D65146 /* MostViralCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MostViralCollectionView.swift; sourceTree = "<group>"; };
 		084DA63D2C2C5CD800D65146 /* MostViralCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MostViralCollectionCell.swift; sourceTree = "<group>"; };
 		08B3EC2F2C2D8C1D00370DE8 /* MostViralModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MostViralModel.swift; sourceTree = "<group>"; };
@@ -54,9 +56,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		082EBBBC2C32E9D900987956 /* Worker */ = {
+			isa = PBXGroup;
+			children = (
+				082EBBBA2C32E9C500987956 /* MostViralWorker.swift */,
+			);
+			path = Worker;
+			sourceTree = "<group>";
+		};
 		084DA63A2C2C5CB100D65146 /* MostViral */ = {
 			isa = PBXGroup;
 			children = (
+				082EBBBC2C32E9D900987956 /* Worker */,
 				08B3EC342C2D96FE00370DE8 /* GenericButton */,
 				08B3EC312C2D8F4100370DE8 /* CollectionView */,
 				B66B352B2C2B0B4100241029 /* MostViralFeed.swift */,
@@ -230,6 +241,7 @@
 				B66B353D2C2F011800241029 /* ContentView.swift in Sources */,
 				B66B352C2C2B0B4100241029 /* MostViralFeed.swift in Sources */,
 				084DA63C2C2C5CCD00D65146 /* MostViralCollectionView.swift in Sources */,
+				082EBBBB2C32E9C500987956 /* MostViralWorker.swift in Sources */,
 				08B3EC302C2D8C1D00370DE8 /* MostViralModel.swift in Sources */,
 				B66B352A2C2B0B4100241029 /* Imgur_StudyApp.swift in Sources */,
 				B66B353F2C32CDF500241029 /* TagsViewModel.swift in Sources */,
