@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		080CBB032C34362C002C506D /* DateWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 080CBB022C34362C002C506D /* DateWorker.swift */; };
 		082EBBBB2C32E9C500987956 /* MostViralWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082EBBBA2C32E9C500987956 /* MostViralWorker.swift */; };
 		084DA63C2C2C5CCD00D65146 /* MostViralCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084DA63B2C2C5CCD00D65146 /* MostViralCollectionView.swift */; };
 		084DA63E2C2C5CD800D65146 /* MostViralCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084DA63D2C2C5CD800D65146 /* MostViralCollectionCell.swift */; };
@@ -26,6 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		080CBB022C34362C002C506D /* DateWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateWorker.swift; sourceTree = "<group>"; };
 		082EBBBA2C32E9C500987956 /* MostViralWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MostViralWorker.swift; sourceTree = "<group>"; };
 		084DA63B2C2C5CCD00D65146 /* MostViralCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MostViralCollectionView.swift; sourceTree = "<group>"; };
 		084DA63D2C2C5CD800D65146 /* MostViralCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MostViralCollectionCell.swift; sourceTree = "<group>"; };
@@ -59,6 +61,7 @@
 		082EBBBC2C32E9D900987956 /* Worker */ = {
 			isa = PBXGroup;
 			children = (
+				080CBB022C34362C002C506D /* DateWorker.swift */,
 				082EBBBA2C32E9C500987956 /* MostViralWorker.swift */,
 			);
 			path = Worker;
@@ -247,6 +250,7 @@
 				B66B353F2C32CDF500241029 /* TagsViewModel.swift in Sources */,
 				B66B35432C32D39E00241029 /* CardView.swift in Sources */,
 				084DA63E2C2C5CD800D65146 /* MostViralCollectionCell.swift in Sources */,
+				080CBB032C34362C002C506D /* DateWorker.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -11,17 +11,22 @@ struct MostViralCollectionCell: View {
     let model: MostViralModel
 
     private func getHeaderInfo() -> some View {
+
         return HStack(spacing: 8) {
-            Text("@user)")
+            if let account = model.account_url {
+                Text(account)
+            }
             Text(".")
-            Text("00h")
-                
+            if let epochTime = model.datetime {
+                let dateText = DateWorker.getData(epochTime: epochTime)
+                Text(dateText)
+            }
         }
         .foregroundColor(Color(red: 0.151, green: 0.151, blue: 0.169, opacity: 0.6))
     }
     
     private func getPostTitle() -> some View {
-        guard let title = model.title else { return Text("")}
+        guard let title = model.title else { return Text("") }
         return Text("\(String(describing: title))")
                     .font(.system(size: 17))
                     .bold()
