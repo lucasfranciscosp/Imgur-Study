@@ -16,7 +16,7 @@ struct TagsView: View {
         NavigationStack {
             GridTagsView()
             
-            .navigationTitle("Teste Titulo")
+            .navigationTitle("Tags")
             .searchable(text: $searchText, placement: .navigationBarDrawer(displayMode: .always), prompt: "Search for #tags")
         }
     }

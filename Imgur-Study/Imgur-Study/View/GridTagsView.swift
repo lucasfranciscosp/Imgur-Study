@@ -20,7 +20,9 @@ struct GridTagsView: View {
         ScrollView {
             LazyVGrid(columns: columns, spacing: 20){
                 ForEach(items, id: \.self) { item in
-                    CardView()
+                    NavigationLink(destination: TagsDetailView()) {
+                        CardView()
+                    }
                 }
             }
         }

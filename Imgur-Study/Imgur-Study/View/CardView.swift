@@ -21,10 +21,10 @@ struct CardView: View{
                     .frame(width: cardAndImageWidth, height: imageHeight)
                     .clipped()
                 LazyVStack(alignment: .leading, spacing: 2) {
-                    Text("No Name")
+                    Text("Pinguins!")
                         .font(.custom("Avenir", size: 14))
                         .fontWeight(.bold)
-                    Text("No Address")
+                    Text("10000 posts")
                         .font(.custom("Avenir", size: 12))
                         .foregroundColor(SwiftUI.Color.gray)
                 }
