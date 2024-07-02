@@ -11,9 +11,7 @@ extension TagsView {
     @Observable
     class ViewModel {
         func populateView() {
-//            for i in 1...6 {
-//                
-//            }
+            
         }
     }
 }

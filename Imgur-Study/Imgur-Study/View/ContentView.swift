@@ -31,15 +31,18 @@ struct ContentView: View {
                     Image(systemName: "house")
                     Text("Your feed")
                 }
-            Text("Implementar")
+            TagsView()
                 .tabItem {
                     Image(systemName: "number")
                     Text("Tags")
                 }
-            Text("Implementar")
+            PhotoSelector()
                 .tabItem {
                     Image(systemName: "square.and.arrow.up")
                     Text("New Post")
+                }
+                .onTapGesture {
+                    PhotoSelector()
                 }
             Text("Implementar")
                 .tabItem {
