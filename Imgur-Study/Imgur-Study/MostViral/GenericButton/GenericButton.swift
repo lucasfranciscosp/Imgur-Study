@@ -15,7 +15,9 @@ struct GenericButton: View {
 
     var body: some View {
         Button {
-            
+            MostViralWorker.getMostViralModelList { list in
+                print(list)
+            }
         } label: {
             ZStack {
                 RoundedRectangle(cornerRadius: 40)

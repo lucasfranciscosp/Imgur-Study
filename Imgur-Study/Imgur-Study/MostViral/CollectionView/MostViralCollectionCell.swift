@@ -11,19 +11,25 @@ struct MostViralCollectionCell: View {
     let model: MostViralModel
 
     private func getHeaderInfo() -> some View {
+
         return HStack(spacing: 8) {
-            Text("@\(model.user)")
+            if let account = model.account_url {
+                Text(account)
+            }
             Text(".")
-            Text(model.postTime)
-                
+            if let epochTime = model.datetime {
+                let dateText = DateWorker.getData(epochTime: epochTime)
+                Text(dateText)
+            }
         }
         .foregroundColor(Color(red: 0.151, green: 0.151, blue: 0.169, opacity: 0.6))
     }
     
     private func getPostTitle() -> some View {
-        Text(model.title)
-            .font(.system(size: 17))
-            .bold()
+        guard let title = model.title else { return Text("") }
+        return Text("\(String(describing: title))")
+                    .font(.system(size: 17))
+                    .bold()
     }
 
     private func getRoundImage() -> some View {
@@ -45,7 +51,7 @@ struct MostViralCollectionCell: View {
     private func getTagScroll() -> some View {
         return ScrollView(.horizontal) {
             LazyHGrid(rows: [GridItem(.flexible())]) {
-                ForEach(0..<model.tags.count) { index in
+                ForEach(0..<3) { index in
                     getTagButton()
                 }
             }
@@ -87,6 +93,4 @@ struct MostViralCollectionCell: View {
     }
 }
 
-#Preview {
-    MostViralCollectionCell(model: MostViralModel(title: "title of the post here", tags: ["tag1", "tag2", "tag3"], user: "name", userImage: "", postTime: "00h", imageId: ""))
-}
+
