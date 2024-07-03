@@ -85,7 +85,7 @@ struct FeedView: View {
                         .foregroundColor(.green)
                 }
             })
-            .searchable(text: $searchText, placement: .automatic, prompt: "Search for #tags")
+            .searchable(text: $searchText, placement: .automatic, prompt: "Images, #tags and @users")
             .navigationTitle(actualViewSelected)
         }
     }
