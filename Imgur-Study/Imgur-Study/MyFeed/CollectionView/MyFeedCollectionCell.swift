@@ -67,6 +67,7 @@ struct MyFeedCollectionCell: View {
                 .foregroundColor(Color(red: 0.06666666666666667, green: 0.5333333333333333, blue: 0.3058823529411765))
 
             Text((model.points != nil) ? "\(model.points!)" : "")
+                .lineLimit(1)
 
             Image(systemName: "arrowshape.down.fill").foregroundColor(Color(red: 0.06666666666666667, green: 0.5333333333333333, blue: 0.3058823529411765))
         }
@@ -79,6 +80,7 @@ struct MyFeedCollectionCell: View {
                 .foregroundColor(Color(red: 0.06666666666666667, green: 0.5333333333333333, blue: 0.3058823529411765))
 
             Text((model.comment_count != nil) ? "\(model.comment_count!)" : "")
+                .lineLimit(1)
         }
         .frame(height: 52)
     }
@@ -131,10 +133,14 @@ struct MyFeedCollectionCell: View {
                 .scaledToFit()
                 .padding(.all, 0)
 
-                HStack(spacing: 86) {
+                HStack() {
+                    Spacer()
                     getPoints()
+                    Spacer()
                     getComments()
+                    Spacer()
                     getShare()
+                    Spacer()
                 }
             }
             .background(Color.white)
@@ -145,6 +151,6 @@ struct MyFeedCollectionCell: View {
 
 
 #Preview {
-    MyFeedCollectionCell(model: MyFeedModel(title: "oioioi", account_url: "aaaaaaaaa"))
+    MyFeedCollectionCell(model: MyFeedModel(title: "oioioi", comment_count:100000, points: 100000, account_url: "aaaaaaaaa"))
 }
 
