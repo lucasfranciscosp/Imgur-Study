@@ -28,9 +28,9 @@ struct MyFeedCollectionCell: View {
     }
     
     private func getPostTitle() -> some View {
-        guard let title = model.title else { return Text("") }
-        return Text("\(String(describing: title))")
+        return Text("\(String(describing: model.title ?? ""))")
                     .font(.system(size: 17))
+                    .multilineTextAlignment(.leading)
                     .bold()
     }
 
@@ -100,11 +100,16 @@ struct MyFeedCollectionCell: View {
                 VStack {
                     HStack {
                         getRoundImage()
-                        Spacer()
                         VStack(spacing: 4) {
-                            getPostTitle()
-                                .lineLimit(1)
-                            getHeaderInfo()
+                            HStack {
+                                getPostTitle()
+                                    .lineLimit(1)
+                                Spacer()
+                            }
+                            HStack {
+                                getHeaderInfo()
+                                Spacer()
+                            }
                         }
                         Spacer()
                         Spacer()
@@ -135,6 +140,6 @@ struct MyFeedCollectionCell: View {
 
 
 #Preview {
-    MyFeedCollectionCell(model: MyFeedModel())
+    MyFeedCollectionCell(model: MyFeedModel(title: "oioioi", account_url: "aaaaaaaaa"))
 }
 
