@@ -122,10 +122,15 @@ struct MyFeedCollectionCell: View {
                 }
                 .padding([.top, .leading, .trailing])
 
-                Image("Image2")
-                    .resizable()
-                    .scaledToFit()
-                    .padding(.all, 0)
+                AsyncImage(url: URL(string: model.images?.first?.link ?? "")) { image in
+                    image.resizable()
+                } placeholder: {
+                    ProgressView()
+                }
+                .frame(width: 393, height: 393)
+                .scaledToFit()
+                .padding(.all, 0)
+
                 HStack(spacing: 86) {
                     getPoints()
                     getComments()
