@@ -11,10 +11,10 @@ struct ContentView: View {
     var body: some View {
         
         TabView {
-            FeedView()
+            MostViralFeed()
                 .tabItem {
                     Image(systemName: "house")
-                    Text("Your feed")
+                    Text("Your Feed")
                 }
             TagsView()
                 .tabItem {

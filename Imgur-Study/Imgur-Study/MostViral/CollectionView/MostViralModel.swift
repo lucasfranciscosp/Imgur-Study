@@ -16,6 +16,7 @@ struct MostViralModel: Codable {
     var comment_count:Int?
     var images:[ImageViral]?
     var views: Int?
+    var points: Int?
     var datetime: Int? //epoch time
     var account_url: String?
 }

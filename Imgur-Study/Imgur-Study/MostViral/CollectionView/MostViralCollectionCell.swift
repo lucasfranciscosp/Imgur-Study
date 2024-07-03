@@ -15,11 +15,13 @@ struct MostViralCollectionCell: View {
         return HStack(spacing: 8) {
             if let account = model.account_url {
                 Text(account)
+                    .lineLimit(1)
             }
             Text(".")
             if let epochTime = model.datetime {
                 let dateText = DateWorker.getData(epochTime: epochTime)
                 Text(dateText)
+                    .lineLimit(1)
             }
         }
         .foregroundColor(Color(red: 0.151, green: 0.151, blue: 0.169, opacity: 0.6))
@@ -59,21 +61,54 @@ struct MostViralCollectionCell: View {
         .padding(.horizontal, 0.0)
     }
 
+    private func getPoints() -> some View {
+        return HStack(spacing: 16) {
+            Image(systemName: "arrowshape.up.fill")
+                .foregroundColor(Color(red: 0.06666666666666667, green: 0.5333333333333333, blue: 0.3058823529411765))
+
+            Text((model.points != nil) ? "\(model.points!)" : "")
+
+            Image(systemName: "arrowshape.down.fill").foregroundColor(Color(red: 0.06666666666666667, green: 0.5333333333333333, blue: 0.3058823529411765))
+        }
+        .frame(height: 52)
+    }
+
+    private func getComments() -> some View {
+        return HStack(spacing: 16) {
+            Image(systemName: "bubble.fill")
+                .foregroundColor(Color(red: 0.06666666666666667, green: 0.5333333333333333, blue: 0.3058823529411765))
+
+            Text((model.comment_count != nil) ? "\(model.comment_count!)" : "")
+        }
+        .frame(height: 52)
+    }
+
+    private func getShare() -> some View {
+        return Button(action: {
+
+        }, label: {
+            Image(systemName: "arrowshape.turn.up.backward.2.fill")
+                .foregroundColor(Color(red: 0.06666666666666667, green: 0.5333333333333333, blue: 0.3058823529411765))
+                .scaleEffect(x: -1, y: 1)
+                
+        })
+    }
+
     var body: some View {
         ZStack {
-            VStack(spacing: 16) {
+            VStack() {
                 VStack {
                     HStack {
                         getRoundImage()
                         Spacer()
                         VStack(spacing: 4) {
                             getPostTitle()
+                                .lineLimit(1)
                             getHeaderInfo()
                         }
                         Spacer()
                         Spacer()
                         getFollowButton()
-                        Spacer()
                     }
                     .padding(.trailing, 0.0)
 
@@ -86,6 +121,11 @@ struct MostViralCollectionCell: View {
                     .resizable()
                     .scaledToFit()
                     .padding(.all, 0)
+                HStack(spacing: 86) {
+                    getPoints()
+                    getComments()
+                    getShare()
+                }
             }
             .background(Color.white)
         }
@@ -93,4 +133,8 @@ struct MostViralCollectionCell: View {
     }
 }
 
+
+#Preview {
+    MostViralCollectionCell(model: MostViralModel())
+}
 
