@@ -29,18 +29,12 @@ struct PhotoSelector: View {
                 Button(action: {
                     
                 }) {
-//                    ZStack {
-//                        Rectangle()
-//                            .frame(width: 93, height: 28)
-//                            .cornerRadius(40)
-//                            .foregroundColor(.blue)
                         HStack {
                             Image(systemName: "plus.circle.fill")
                                 .frame(width: 18, height: 20)
                                 .foregroundColor(.white)
                             Text("add tag")
                                 .foregroundColor(.white)
-//                                .padding(.trailing, 3)
                         }
                         .padding(.horizontal)
                         .padding(.vertical, 6)
@@ -49,8 +43,6 @@ struct PhotoSelector: View {
                         }
                         .padding(.leading)
                         .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, alignment: .leading)
-//                    }
-                    
                 }
                 .frame(maxWidth: .infinity)
                 .padding(.trailing)
@@ -98,7 +90,12 @@ struct PhotoSelector: View {
     
     var photoPickerButton: some View {
         PhotosPicker(selection: $imageSelection, matching: .images, photoLibrary: .shared()) {
-            Text("Clique para adicionar foto")
+            if uiImage == nil {
+                Text("Clique para adicionar foto")
+            } else {
+                Text("Trocar foto")
+            }
+            
         }
         .photosPickerStyle(.presentation)
     }
