@@ -8,7 +8,7 @@
 import Foundation
 import API
 
-class MostViralWorker {
+class MyFeedWorker {
     static func getMostViralModelList(completion: @escaping ((MostViralList?) -> (Void))) {
         API.shared.getMostViral(completion: { data in
             do {

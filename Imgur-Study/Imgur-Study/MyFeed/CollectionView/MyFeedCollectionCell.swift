@@ -7,8 +7,8 @@
 
 import SwiftUI
 import API
-struct MostViralCollectionCell: View {
-    let model: MostViralModel
+struct MyFeedCollectionCell: View {
+    let model: MyFeedModel
 
     private func getHeaderInfo() -> some View {
 
@@ -135,6 +135,6 @@ struct MostViralCollectionCell: View {
 
 
 #Preview {
-    MostViralCollectionCell(model: MostViralModel())
+    MyFeedCollectionCell(model: MyFeedModel())
 }
 

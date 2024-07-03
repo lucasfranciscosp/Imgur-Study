@@ -8,20 +8,20 @@
 import Foundation
 import API
 
-struct MostViralModel: Codable {
+struct MyFeedModel: Codable {
     var title: String?
     var id: String?
     var ups: Int?
     var downs: Int?
     var comment_count:Int?
-    var images:[ImageViral]?
+    var images:[MyFeedImage]?
     var views: Int?
     var points: Int?
     var datetime: Int? //epoch time
     var account_url: String?
 }
 
-struct ImageViral: Codable {
+struct MyFeedImage: Codable {
     var id: String?
     var type: String?
     var width: Int?
@@ -32,6 +32,6 @@ struct ImageViral: Codable {
 }
 
 struct MostViralList: Codable {
-    var data:[MostViralModel]
+    var data:[MyFeedModel]
 }
 

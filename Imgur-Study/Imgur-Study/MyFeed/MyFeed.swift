@@ -7,14 +7,14 @@
 
 import SwiftUI
 
-struct MostViralFeed: View {
+struct MyFeed: View {
     @State private var searchText: String = ""
     @State var postList: MostViralList?
 
     var body: some View {
         NavigationStack {
             VStack {
-                MostViralCollectionView(postList: postList)
+                MyFeedCollectionView(postList: postList)
                     .padding(.top, 8)
                     .background(Color(red: 0, green: 0, blue: 0).opacity(0.3))
             }
@@ -23,7 +23,7 @@ struct MostViralFeed: View {
         }
         .searchable(text: $searchText, placement: .navigationBarDrawer(displayMode: .always))
         .onAppear {
-            MostViralWorker.getMostViralModelList { list in
+            MyFeedWorker.getMostViralModelList { list in
                 self.postList = list
                 print(postList?.data.first)
             }
@@ -32,5 +32,5 @@ struct MostViralFeed: View {
 }
 
 #Preview {
-    MostViralFeed()
+    MyFeed()
 }

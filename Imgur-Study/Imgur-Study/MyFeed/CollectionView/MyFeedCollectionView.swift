@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct MostViralCollectionView: View {
+struct MyFeedCollectionView: View {
     var postList: MostViralList?
 
     var body: some View {
@@ -15,7 +15,7 @@ struct MostViralCollectionView: View {
             ScrollView(.vertical) {
                 LazyVGrid(columns: [GridItem(.flexible())]) {
                     ForEach(0..<postList.data.count) { index in
-                        MostViralCollectionCell(model: postList.data[index])
+                        MyFeedCollectionCell(model: postList.data[index])
                     }
                 }
             }

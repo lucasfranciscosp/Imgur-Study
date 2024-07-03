@@ -15,7 +15,7 @@ struct GenericButton: View {
 
     var body: some View {
         Button {
-            MostViralWorker.getMostViralModelList { list in
+            MyFeedWorker.getMostViralModelList { list in
                 print(list)
             }
         } label: {
