@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct MyFeedCollectionView: View {
-    var postList: MostViralList?
+    var postList: MyFeedList?
 
     var body: some View {
         if let postList = postList {

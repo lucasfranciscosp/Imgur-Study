@@ -31,7 +31,7 @@ struct MyFeedImage: Codable {
     var animated: Bool?
 }
 
-struct MostViralList: Codable {
+struct MyFeedList: Codable {
     var data:[MyFeedModel]
 }
 

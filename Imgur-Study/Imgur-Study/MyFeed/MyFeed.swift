@@ -9,7 +9,7 @@ import SwiftUI
 
 struct MyFeed: View {
     @State private var searchText: String = ""
-    @State var postList: MostViralList?
+    @State var postList: MyFeedList?
 
     var body: some View {
         NavigationStack {

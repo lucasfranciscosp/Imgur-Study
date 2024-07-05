@@ -149,7 +149,6 @@ struct MyFeedCollectionCell: View {
     }
 }
 
-
 #Preview {
     MyFeedCollectionCell(model: MyFeedModel(title: "oioioi", comment_count:100000, points: 100000, account_url: "aaaaaaaaa"))
 }
