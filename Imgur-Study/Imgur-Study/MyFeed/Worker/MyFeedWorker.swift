@@ -11,7 +11,7 @@ import SwiftUI
 
 class MyFeedWorker {
     static func getMostViralModelList(completion: @escaping ((MyFeedList?) -> (Void))) {
-        API.shared.getMostViral(completion: { data in
+        API.shared.getMostViralPosts(completion: { data in
             do {
                 if let data = data {
                     let mostViralList: MyFeedList = try JSONDecoder().decode(MyFeedList.self, from: data)
@@ -21,5 +21,18 @@ class MyFeedWorker {
                print(error)
             }
         })
+    }
+
+    static func getPostList(filterType: MyViewFilterType , sorting: MyViewFilterSorting, completion: @escaping ((MyFeedList?) -> (Void))) {
+        API.shared.getPosts(filterType: filterType.rawValue, sorting: sorting.rawValue) { data in
+            do {
+                if let data = data {
+                    let mostViralList: MyFeedList = try JSONDecoder().decode(MyFeedList.self, from: data)
+                    completion(mostViralList)
+                }
+            } catch let error {
+               print(error)
+            }
+        }
     }
 }
