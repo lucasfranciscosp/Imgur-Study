@@ -10,9 +10,18 @@ import SwiftUI
 struct MyFeed: View {
     @State private var searchText: String = ""
     @State var postList: MyFeedList?
+    @State var caller: Int = 0
     @State var navTitle: String = "For you"
     @State var sorting: MyViewFilterSorting = .Newest
     @State var filterType: MyViewFilterType = .ForYou
+
+    private func updatePostList() {
+        MyFeedWorker.getPostList(filterType: filterType, sorting: sorting) { postList in
+            self.postList = postList
+            caller+=1
+            print(caller)
+        }
+    }
 
     var body: some View {
     
@@ -25,6 +34,8 @@ struct MyFeed: View {
                         Menu {
                             Button(action: {
                                 navTitle = "Most viral"
+                                filterType = .MostViral
+                                updatePostList()
                             }) {
                                 if navTitle == "Most viral" {
                                     Label("Most viral", systemImage: "checkmark")
@@ -33,9 +44,11 @@ struct MyFeed: View {
                                     Text("Most viral")
                                 }
                             }
+
                             Button(action: {
                                 navTitle = "User sub"
-                                // chama os user sub
+                                filterType = .UserSub
+                                updatePostList()
                             }) {
                                 if navTitle == "User sub" {
                                     Label("User sub", systemImage: "checkmark")
@@ -44,9 +57,11 @@ struct MyFeed: View {
                                     Text("User sub")
                                 }
                             }
+
                             Button(action: {
                                 navTitle = "Trending"
-                                // chama trending
+                                filterType = .Trending
+                                updatePostList()
                             }) {
                                 if navTitle == "Trending" {
                                     Label("Trending", systemImage: "checkmark")
@@ -55,9 +70,11 @@ struct MyFeed: View {
                                     Text("Trending")
                                 }
                             }
+
                             Button(action: {
                                 navTitle = "For you"
-                                // chama for you
+                                filterType = .ForYou
+                                updatePostList()
                             }) {
                                 if navTitle == "For you" {
                                     Label("For you", systemImage: "checkmark")
@@ -66,14 +83,27 @@ struct MyFeed: View {
                                     Text("For you")
                                 }
                             }
+
                             Divider()
-                            Button(action: { /* Ação para Popular */ }) {
+
+                            Button(action: {
+                                sorting = .Popular
+                                updatePostList()
+                            }) {
                                 Label("Popular", systemImage: "heart")
                             }
-                            Button(action: { /* Ação para Newest */ }) {
+
+                            Button(action: {
+                                sorting = .Newest
+                                updatePostList()
+                            }) {
                                 Label("Newest", systemImage: "gear")
                             }
-                            Button(action: { /* Ação para Random */ }) {
+
+                            Button(action: {
+                                sorting = .Random
+                                updatePostList()
+                            }) {
                                 Label("Random", systemImage: "shuffle")
                             }
                         } label: {
@@ -92,9 +122,7 @@ struct MyFeed: View {
                     .navigationTitle(navTitle)
                 }
                 .onAppear {
-                    MyFeedWorker.getPostList(filterType: filterType, sorting: sorting) { postList in
-                        self.postList = postList
-                    }
+                    updatePostList()
                 }
     }
 }
