@@ -14,6 +14,7 @@ struct ContentView: View {
             MyFeed()
                 .tabItem {
                     Image(systemName: "house")
+                        .environment(\.symbolVariants, .none)
                     Text("Your Feed")
                 }
             TagsView()
@@ -24,6 +25,7 @@ struct ContentView: View {
             PhotoSelector()
                 .tabItem {
                     Image(systemName: "square.and.arrow.up")
+                        .environment(\.symbolVariants, .none)
                     Text("New Post")
                 }
                 .onTapGesture {
@@ -31,15 +33,18 @@ struct ContentView: View {
                 }
             Text("Implementar")
                 .tabItem {
-                    Image(systemName: "clock")
+                    Image(systemName: "ellipsis.message")
+                        .environment(\.symbolVariants, .none)
                     Text("Chat")
                 }
             Text("Implementar")
                 .tabItem {
                     Image(systemName: "person.crop.circle")
+                        .environment(\.symbolVariants, .none)
                     Text("Profile")
                 }
         }
+        .accentColor(.green)
     }
 }
 

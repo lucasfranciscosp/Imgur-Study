@@ -33,9 +33,12 @@ struct PhotoSelector: View {
                             Image(systemName: "plus.circle.fill")
                                 .frame(width: 18, height: 20)
                                 .foregroundColor(.white)
+                            
                             Text("add tag")
                                 .foregroundColor(.white)
+                                .buttonStyle(PlainButtonStyle())
                         }
+                        
                         .padding(.horizontal)
                         .padding(.vertical, 6)
                         .background{
@@ -44,6 +47,7 @@ struct PhotoSelector: View {
                         .padding(.leading)
                         .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, alignment: .leading)
                 }
+                .foregroundColor(.blue)
                 .frame(maxWidth: .infinity)
                 .padding(.trailing)
                 Spacer()
@@ -92,6 +96,7 @@ struct PhotoSelector: View {
         PhotosPicker(selection: $imageSelection, matching: .images, photoLibrary: .shared()) {
             if uiImage == nil {
                 Text("Clique para adicionar foto")
+                    .foregroundColor(.blue)
             } else {
                 Text("Trocar foto")
             }

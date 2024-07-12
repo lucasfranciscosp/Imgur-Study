@@ -107,7 +107,7 @@ struct MyFeed: View {
                                 Label("Random", systemImage: "shuffle")
                             }
                         } label: {
-                            Image(systemName: "line.horizontal.3")
+                            Image(systemName: "ellipsis.circle")
                                 .foregroundColor(.green)
                         }
 
